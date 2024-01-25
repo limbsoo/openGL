@@ -1,0 +1,53 @@
+       Vector4 forward = eye - at; //forward는 카메라가 바라보는 방향
+     //Vector4 nf = normalize(forward); //정규화
+     normalize(forward);
+
+     Vector4 side = crossProduct(upVector, forward); //upVector와 forwardVector 외적곱
+     //ector4 ns = normalize(side);
+     normalize(side);
+
+     Vector4 up = crossProduct(forward, side);
+     //Vector4 nu = normalize(up);
+
+     //forward, side, up 벡터는 전역 좌표계 상의 카메라 방향
+
+     //카메라는 다시 구해놓은 원점에서부터 특정 위치만큼 떨어져 있다->eye좌표 카메라의 - 좌표만큼 이동 연산
+
+     Vector4 pos(-eye.x, -eye.y, -eye.z);
+    
+     Matrix4 inpVM = {
+          side.x, -up.x,   forward.x,  0.0,
+          side.y, -up.y,   forward.y,  0.0,
+          side.z, -up.z,   forward.z,  0.0,
+          0,          0,           0,  1.0
+     };
+ 
+     Matrix4 TM = {
+          1.0,     0.0,   0.0,   0.0,
+          0.0,     1.0,   0.0,   0.0,
+          0.0,     0.0,   1.0,   0.0,
+          eye.x, eye.y, eye.z,   1.0
+     };
+
+     Matrix4 viewMatrix = inpVM * TM;
+
+
+     //Vector4 pos(-eye.Dot(side), -eye.Dot(up), -eye.Dot(forward));
+
+     //float inpVM[] = {
+     //          side.x, -up.x,   forward.x,  0.0,
+     //          side.y, -up.y,   forward.y,  0.0,
+     //          side.z, -up.z,   forward.z,  0.0,
+     //          pos.x,  pos.y,       pos.z,  1.0
+     //};
+
+     //Matrix4 viewMatrix = Matrix4(inpVM);
+
+
+     //Matrix4 viewMatrix =
+     //{
+     //      side.x,		-up.x,		forward.x,	0.0,
+     //      side.y,		-up.y,		forward.y,	0.0,
+     //      side.z,		-up.z,		forward.z,	0.0,
+     //      pos.x,       pos.y,      pos.z,      1.0
+     //};

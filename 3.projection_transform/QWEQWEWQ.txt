@@ -1,0 +1,19 @@
+	int width = 640, height = 480;
+
+	FILE* input_file, * output_file;
+
+	char input_data[640][480][3];
+	char output_data[640][480][3];
+
+	input_file = fopen("pFileName", "rb");
+	//if (input_file == NULL)
+	//{
+	//	printf("File not found!!\n");
+	//	return;
+	//}
+	fread(input_data, sizeof(char), width * height, input_file);
+
+	for (int i = 0; i < height; i++)
+		for (int j = 0; j < width; j++)
+			for (int k = 0; k < 3; k++)
+				output_data[i][j][k] = 255 - input_data[i][j][k];

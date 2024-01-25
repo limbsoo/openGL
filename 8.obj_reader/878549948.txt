@@ -1,0 +1,59 @@
+     Matrix4 ret;
+     float inverseArr[4][4] = { 0 };
+     float t;
+
+     //for(int i = 0; i < 4; i++)
+     //{
+     //    for (int j = 0; j < 4; j++)
+     //    {
+     //        inverseArr[i][j] = m.arr[i][j];
+     //    }
+     //}
+
+     //for (int i = 0; i < 4; i++)
+     //{
+     //    for (int j = 0; j < 2 * 4; j++)
+     //    {
+     //        if (i == j - n)
+     //        {
+     //            inverseArr[i][j] = 1;
+     //        }
+     //        else
+     //        {
+     //            inverseArr[i][j] = 0;
+     //        }
+
+     //    }
+     //}
+
+     //for (int i = 0; i < 4; i++)
+     //{
+     //    t = inverseArr[i][i];
+
+     //    for (int j = i; j < 2 * 4; j++)
+     //    {
+     //        inverseArr[i][j] = inverseArr[i][j] / t;
+     //    }
+
+     //    for (int j = 0; j < 4; j++)
+     //    {
+     //        if (i != j)
+     //        {
+     //            t = inverseArr[j][i];
+
+     //            for (int k = 0; k < 2 * 4; k++)
+     //            {
+     //               inverseArr[j][k] = inverseArr[j][k] - t * inverseArr[i][k];
+     //            }
+
+     //        }
+     //    }
+     //}
+
+     //for (int i = 0; i < 4; i++)
+     //{
+     //    for (int j = 0; j < 4; i++)
+     //    {
+     //        ret.arr[i][j] = inverseArr[i][j];
+     //    }
+     //}

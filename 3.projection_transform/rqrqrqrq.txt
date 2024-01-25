@@ -1,0 +1,68 @@
+     Vector4 X, Y, Z;
+
+     Z = eye - at;
+     normalize(Z);
+
+     Y = upVector;
+     X = crossProduct(Y, Z);
+     Y = crossProduct(Z, X);
+
+     normalize(X);
+     normalize(Y);
+     
+
+     R.arr[0][0] = X.x;          R.arr[0][1] = Y.x;           R.arr[0][2] = Z.x;
+     R.arr[1][0] = X.y;          R.arr[1][1] = Y.y;           R.arr[1][2] = Z.y;
+     R.arr[2][0] = X.z;          R.arr[2][1] = Y.z;           R.arr[2][2] = Z.z;
+     R.arr[3][0] = -(X * eye);   R.arr[2][1] = -(Y * eye);    R.arr[2][2] = -(Z * eye);
+
+
+
+ //R.arr[0][0] = left.x;        R.arr[0][1] = left.y;      R.arr[0][2] = left.z;
+ //R.arr[1][0] = up.x;          R.arr[1][1] = up.y;        R.arr[1][2] = up.z;
+ //R.arr[2][0] = forward.x;     R.arr[2][1] = forward.y;   R.arr[2][2] = forward.z;
+
+
+ //Matrix4 lookAt(Vector4 eye, Vector4 at, Vector4 upVector)
+//{
+//    Vector4 n = (eye - at); //forward vector
+//    n = normalize(n); 
+
+//    Vector4 u = crossProduct(upVector, n); //eye side vector
+//    u = normalize(u);
+
+//    //Vector4 v = n * u;
+//    Vector4 v = crossProduct(n, u); //eye up vector
+
+
+//    Matrix4 T = identityMatrix();
+
+//    //T.arr[0][3] = -(eye * u);
+//    //T.arr[1][3] = -(eye * v);
+//    //T.arr[2][3] = -(eye * n);
+//   
+//    T.arr[0][3] = -eye.x;
+//    T.arr[1][3] = -eye.y;
+//    T.arr[2][3] = -eye.z;
+
+//    Matrix4 R = identityMatrix();
+
+
+
+
+//    //Renderer r;
+//    //r.m_world = 
+
+
+//    Matrix4 R = identityMatrix();
+
+//    R.arr[0][0] = u.x;     R.arr[0][1] = u.y;      R.arr[0][2] = u.z;
+//    R.arr[1][0] = v.x;     R.arr[1][1] = v.y;      R.arr[1][2] = v.z;
+//    R.arr[2][0] = n.x;     R.arr[2][1] = n.y;      R.arr[2][2] = n.z;
+
+//    Matrix4 viewMatrix = R * T;
+
+//    //Matrix4 viewMatrix = T * R;
+
+//    return viewMatrix;
+//}

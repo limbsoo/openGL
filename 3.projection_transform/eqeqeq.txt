@@ -1,0 +1,228 @@
+//float Renderer::checkWhereTheTriangleIsLooking(int nFace)
+//{
+//	
+//	for (int i = 0; i < m_face[nFace].m_nNumVertex; i++)
+//	{
+//		float checkMinus;
+//		Vector4 v1, v2, v3;
+//
+//		v1.x = m_tramsformedVertex[m_face[nFace].m_vertex[i] - 1][0];
+//		v1.y = m_tramsformedVertex[m_face[nFace].m_vertex[(i + 1) % m_face[nFace].m_nNumVertex] - 1][0];
+//
+//		v2.x = m_tramsformedVertex[m_face[nFace].m_vertex[i] - 1][1];
+//		v2.y = m_tramsformedVertex[m_face[nFace].m_vertex[(i + 1) % m_face[nFace].m_nNumVertex] - 1][1];
+//
+//		v3.x = m_tramsformedVertex[m_face[nFace].m_vertex[i] - 1][2];
+//		v3.y = m_tramsformedVertex[m_face[nFace].m_vertex[(i + 1) % m_face[nFace].m_nNumVertex] - 1][2];
+//		
+//
+//		checkMinus = (v2.x - v1.x)* (v3.y - v1.y) - (v2.y - v1.y) * (v3.x - v1.x);
+//
+//		if (checkMinus < 0)
+//		{
+//			continue;
+//		}
+//
+//		return checkMinus;
+//
+//	}
+//
+//
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+float Renderer::checkWhereTheTriangleIsLooking(Temp tempET[3])
+{
+	bool checkTriangle = false;
+
+	float checkMinus = 0;
+	Vector4 v1, v2, v3;
+
+		if (tempET[0].ymin == tempET[1].ymin)
+		{
+			if (tempET[1].yMax == tempET[2].yMax)
+			{
+				v1.x = tempET[0].x;
+				v1.y = tempET[0].ymin;
+
+				v2.x = ((tempET[1].yMax - tempET[1].ymin) * tempET[1].inverseOfSlope) + tempET[1].x;
+				v2.y = tempET[1].yMax;
+				v3.x = ((tempET[2].yMax - tempET[2].ymin) * tempET[2].inverseOfSlope) + tempET[2].x;
+				v3.y = tempET[2].yMax;
+
+			}
+
+			else
+			{
+				v1.x = tempET[1].x;
+				v1.y = tempET[1].ymin;
+
+				v2.x = ((tempET[0].yMax - tempET[0].ymin) * tempET[0].inverseOfSlope) + tempET[0].x;
+				v2.y = tempET[0].yMax;
+				v3.x = ((tempET[2].yMax - tempET[2].ymin) * tempET[2].inverseOfSlope) + tempET[2].x;
+				v3.y = tempET[2].yMax;
+
+			}
+
+
+		}
+
+		else if (tempET[0].ymin == tempET[2].ymin)
+		{
+			if (tempET[1].yMax == tempET[2].yMax)
+			{
+				v1.x = tempET[0].x;
+				v1.y = tempET[0].ymin;
+
+				v2.x = ((tempET[1].yMax - tempET[1].ymin) * tempET[1].inverseOfSlope) + tempET[1].x;
+				v2.y = tempET[1].yMax;
+				v3.x = ((tempET[2].yMax - tempET[2].ymin) * tempET[2].inverseOfSlope) + tempET[2].x;
+				v3.y = tempET[2].yMax;
+
+			}
+
+			else
+			{
+				v1.x = tempET[2].x;
+				v1.y = tempET[2].ymin;
+
+				v2.x = ((tempET[0].yMax - tempET[0].ymin) * tempET[0].inverseOfSlope) + tempET[0].x;
+				v2.y = tempET[0].yMax;
+				v3.x = ((tempET[1].yMax - tempET[1].ymin) * tempET[1].inverseOfSlope) + tempET[1].x;
+				v3.y = tempET[1].yMax;
+
+			}
+
+		}
+
+		else
+		{
+			if (tempET[0].yMax == tempET[1].yMax)
+			{
+				v1.x = tempET[2].x;
+				v1.y = tempET[2].ymin;
+
+				v2.x = ((tempET[0].yMax - tempET[0].ymin) * tempET[0].inverseOfSlope) + tempET[0].x;
+				v2.y = tempET[0].yMax;
+				v3.x = ((tempET[1].yMax - tempET[1].ymin) * tempET[1].inverseOfSlope) + tempET[1].x;
+				v3.y = tempET[1].yMax;
+			}
+
+			else
+			{
+				v1.x = tempET[1].x;
+				v1.y = tempET[1].ymin;
+
+				v2.x = ((tempET[0].yMax - tempET[0].ymin) * tempET[0].inverseOfSlope) + tempET[0].x;
+				v2.y = tempET[0].yMax;
+				v3.x = ((tempET[2].yMax - tempET[2].ymin) * tempET[2].inverseOfSlope) + tempET[2].x;
+				v3.y = tempET[2].yMax;
+			}
+		}
+
+		checkMinus = ((v2.x - v1.x) * (v3.y - v1.y)) - ((v2.y - v1.y) * (v3.x - v1.x));
+
+
+		return checkMinus;
+}
+
+
+
+
+
+
+
+
+
+			tempET[tempIndex].ymin = ymin;
+			tempET[tempIndex].x = vertices[0][0];
+
+			if (ymin - savedY != 0)
+			{
+				tempET[tempIndex].x += (ymin - savedY) * inverseOfSlope;
+			}
+
+			tempET[tempIndex].yMax = vertices[1][1];
+			tempET[tempIndex].inverseOfSlope = inverseOfSlope;
+			tempET[tempIndex].z = vertices[1][2];
+			tempIndex++;
+
+
+
+
+
+
+			tempET[tempIndex].ymin = ymin;
+			tempET[tempIndex].x = vertices[1][0];
+
+			if (ymin - savedY != 0)
+			{
+				tempET[tempIndex].x += (ymin - savedY) * inverseOfSlope;
+			}
+
+			tempET[tempIndex].yMax = vertices[0][1];
+			tempET[tempIndex].inverseOfSlope = inverseOfSlope;
+			tempET[tempIndex].z = vertices[0][2];
+			tempIndex++;
+
+
+
+
+
+
+	if (checkTriangle == true)
+	{
+		float checkMinus;
+
+		checkMinus = checkWhereTheTriangleIsLooking(tempET);
+
+		if (checkMinus >= 0)
+		{
+			for (int tempIndex = 0; tempIndex < m_face[nFace].m_nNumVertex; tempIndex++)
+			{
+				ymin = tempET[tempIndex].ymin;
+				m_ET[ymin][m_indexCount[ymin]].x = tempET[tempIndex].x;
+				m_ET[ymin][m_indexCount[ymin]].yMax = tempET[tempIndex].yMax;
+				m_ET[ymin][m_indexCount[ymin]].inverseOfSlope = tempET[tempIndex].inverseOfSlope;
+				m_ET[ymin][m_indexCount[ymin]].z = tempET[tempIndex].z;
+				m_indexCount[ymin]++;
+			}
+			filltable = true;
+		}
+
+		else
+		{
+			filltable = false;
+		}
+
+	}
+
+	else
+	{
+		for (int tempIndex = 0; tempIndex < m_face[nFace].m_nNumVertex; tempIndex++)
+		{
+			ymin = tempET[tempIndex].ymin;
+			m_ET[ymin][m_indexCount[ymin]].x = tempET[tempIndex].x;
+			m_ET[ymin][m_indexCount[ymin]].yMax = tempET[tempIndex].yMax;
+			m_ET[ymin][m_indexCount[ymin]].inverseOfSlope = tempET[tempIndex].inverseOfSlope;
+			m_ET[ymin][m_indexCount[ymin]].z = tempET[tempIndex].z;
+			m_indexCount[ymin]++;
+		}
+		filltable = true;
+	}
+
+
+	//checkTriangle = false;
+
+
+

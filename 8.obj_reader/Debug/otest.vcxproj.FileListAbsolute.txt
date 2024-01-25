@@ -1,0 +1,11 @@
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_source\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_Matrix4\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_PreserveVertex\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_cow\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_cameraview\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_cameraview_cow\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_normalVertex_cow\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_spherical Mapping\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_shadow Mapping\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_shadow Mapping_re\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\objReader\Debug\otest.exe

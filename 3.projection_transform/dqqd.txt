@@ -1,0 +1,36 @@
+ //Matrix4 lookAt(float angle)//vector r,u,d,p 매개변수
+ //{
+ //    //Mt = T(-vrp.x,-vrp.y,-vrp.z)
+ //    //vector 
+
+ //    Matrix4 ret;
+
+ //    Matrix4 m, n;
+
+ //    Vector4 r, u, d, p;
+
+ //    m = identityMatrix();
+ //    n = identityMatrix();
+
+ //    //r = right vector 
+ //    m.arr[0][0] = r.x;
+ //    m.arr[0][1] = r.y;
+ //    m.arr[0][2] = r.z;
+ //    // u = up vetor
+ //    m.arr[1][0] = u.x;
+ //    m.arr[1][1] = u.y;
+ //    m.arr[1][2] = u.z;
+ //    // d = direction vector
+ //    m.arr[2][0] = d.x;
+ //    m.arr[2][1] = d.y;
+ //    m.arr[2][2] = d.z;
+ //    //p = camera's position vector
+ //    n.arr[0][3] = -p.x;
+ //    n.arr[1][3] = -p.y;
+ //    n.arr[2][3] = -p.z;
+
+ //    ret = m * n;
+
+ //    return ret;
+
+ //}

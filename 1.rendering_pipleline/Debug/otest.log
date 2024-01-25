@@ -1,0 +1,34 @@
+﻿  Matrix4.cpp
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Matrix4.cpp(137,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Matrix4.cpp(138,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Matrix4.cpp(155,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Matrix4.cpp(156,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Matrix4.cpp(173,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Matrix4.cpp(174,14): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  otest_PreserveVertex.cpp
+  Renderer.cpp
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,16): warning C4477: 'sscanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'unsigned char *'입니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,16): message : 서식 문자열에서 '%hhd'을(를) 사용하는 것이 좋습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,16): warning C4477: 'sscanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'unsigned char *'입니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,16): message : 서식 문자열에서 '%hhd'을(를) 사용하는 것이 좋습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,16): warning C4477: 'sscanf' : 서식 문자열 '%d'에 'int *' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'unsigned char *'입니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,16): message : 서식 문자열에서 '%hhd'을(를) 사용하는 것이 좋습니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(19,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(21,2): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(22,2): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(25,2): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(26,2): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(33,3): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(34,3): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(36,3): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(47,3): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(48,3): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(60,4): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(106,32): warning C4101: 'z' :참조되지 않은 지역 변수입니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(105,8): warning C4101: 'flooringNum' :참조되지 않은 지역 변수입니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(106,14): warning C4101: 'x' :참조되지 않은 지역 변수입니다.
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Renderer.cpp(106,8): warning C4101: 'yMax' :참조되지 않은 지역 변수입니다.
+  Vector4.cpp
+  코드를 생성하고 있습니다...
+Matrix4.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/INCREMENTAL:NO' 사양으로 인해 무시됩니다.
+  otest.vcxproj -> C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Debug\otest.exe

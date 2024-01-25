@@ -1,0 +1,66 @@
+
+				sx = (2 * (m_AET[j].nx + deltaNX)) * ((m_AET[j].nx + deltaNX) * (ndirectionLight.x)) - (ndirectionLight.x);
+				sy = (2 * (m_AET[j].ny + deltaNY)) * ((m_AET[j].ny + deltaNY) * (ndirectionLight.y)) - (ndirectionLight.y);
+				sz = (2 * (m_AET[j].nz + deltaNZ)) * ((m_AET[j].nz + deltaNZ) * (ndirectionLight.z)) - (ndirectionLight.z)+1;
+
+				//sz += 1;
+
+				Vector4 eye(0.f, 0.f, 1.f);
+
+				scala = sqrt(pow(sx, 2) + pow(sy, 2) + pow(sz, 2));
+
+				Vector4 r(sx, sy, sz);
+
+				scala = r * eye;
+
+				//Vector4 n(m_AET[j].nx + deltaNX, m_AET[j].ny + deltaNY, m_AET[j].nz + deltaNZ);
+				//Vector4 l(ndirectionLight.x, ndirectionLight.y, ndirectionLight.z);
+
+				//Vector4 r = (2 * n) * (n * l) - l;
+
+				//rx = (2 * m_AET[j].nx + deltaNX) * ((m_AET[j].nx + deltaNX) * ndirectionLight.x) - ndirectionLight.x;
+				//ry = (2 * m_AET[j].ny + deltaNY) * ((m_AET[j].ny + deltaNY) * ndirectionLight.y) - ndirectionLight.y;
+				//rz = (2 * m_AET[j].nz + deltaNZ) * ((m_AET[j].nz + deltaNZ) * ndirectionLight.z) - ndirectionLight.z;
+
+				//Vector4 v(0.f, 0.f, 1.f);
+
+				//vx = 0.f;
+				//vy = 0.f;
+				//vz = 1.f;
+
+
+				//scala = r * v*3;
+
+				//if (rx == vx && ry == vy && rz == vz)
+				//{
+				//	scala = 1.f;
+				//}
+
+
+					//checkImage[i][k][0] = (GLubyte)m_texture[(int)((480 - i) / scala + 0.5)][(int)((640 - k) / scala + 0.5)][0];
+					//checkImage[i][k][1] = (GLubyte)m_texture[(int)((480 - i) / scala + 0.5)][(int)((640 - k) / scala + 0.5)][1];
+					//checkImage[i][k][2] = (GLubyte)m_texture[(int)((480 - i) / scala + 0.5)][(int)((640 - k) / scala + 0.5)][2];
+
+					//s = ceil((480 - i) / scala + 0.5);
+					//t = ceil((640 - k) / scala + 0.5);
+
+					s = ceil(i / scala + 0.5);
+					t = ceil(k / scala + 0.5);
+
+					checkImage[i][k][0] = (GLubyte)m_texture[s][t][0];
+					checkImage[i][k][1] = (GLubyte)m_texture[s][t][1];
+					checkImage[i][k][2] = (GLubyte)m_texture[s][t][2];
+
+
+
+					//checkImage[i][k][0] = (GLubyte)m_texture[480 - i][640 - k][0];
+					//checkImage[i][k][1] = (GLubyte)m_texture[480 - i][640 - k][1];
+					//checkImage[i][k][2] = (GLubyte)m_texture[480 - i][640 - k][2];
+
+					//checkImage[i][k][0] = (GLubyte)m_texture[i][k][0] * max(scala, 0.f);
+					//checkImage[i][k][1] = (GLubyte)m_texture[i][k][1] * max(scala, 0.f);
+					//checkImage[i][k][2] = (GLubyte)m_texture[i][k][2] * max(scala, 0.f);
+
+					//checkImage[i][k][0] = (GLubyte)m_sphereTexture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][0] * max(scala, 0.f);
+					//checkImage[i][k][1] = (GLubyte)m_sphereTexture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][1] * max(scala, 0.f);
+					//checkImage[i][k][2] = (GLubyte)m_sphereTexture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][2] * max(scala, 0.f);

@@ -1,0 +1,145 @@
+		while (!readFile.eof())
+		{
+			int cnt = 0;
+			int i = 0;
+			string str;
+			getline(readFile, str);
+			string buff;
+
+			if (str[0] == 'v' && str[1] == ' ')
+			{
+				cnt = 2;
+
+				while (str[cnt] != '\n')
+				{
+					if (str[cnt] != ' ')
+					{
+						buff += str[cnt];
+						cnt++;
+					}
+
+					else
+					{
+						if (buff.size() > 0)
+						{
+
+							vector<vector<int>>arr2;
+							vector<int>arr;
+							arr.push_back(1);
+							arr.push_back(2);
+							arr.push_back(3);
+
+							arr2.push_back(arr);
+
+							vertex[i].push_back()
+							vertex[vertexNum][i].pushback();
+							m_vertex[vertexNum][i] = buff;
+							buff.clear();
+							cnt++;
+							i++;
+						}
+
+						else
+						{
+							cnt++;
+						}
+					}
+				}
+				vertexNum++;
+				cout << m_vertex[vertexNum][i] << endl;
+			}
+
+			else if (str[0] == 'v' && str[1] == 't')
+			{
+				cnt = 2;
+
+				while (str[cnt] != '\n')
+				{
+					if (str[cnt] != ' ')
+					{
+						buff += str[cnt];
+						cnt++;
+					}
+
+					else
+					{
+						if (buff.size() > 0)
+						{
+							buff = m_texture[textureNum][i];
+							buff.clear();
+							cnt++;
+							i++;
+						}
+
+						else
+						{
+							cnt++;
+						}
+					}
+				}
+				textureNum++;
+				cout << m_texture[textureNum][i] << endl;
+			}
+			else if (str[0] == 'v' && str[1] == 'n')
+			{
+
+				cnt = 2;
+
+				while (str[cnt] != '\n')
+				{
+					if (str[cnt] != ' ')
+					{
+						buff += str[cnt];
+						cnt++;
+					}
+
+					else
+					{
+						if (buff.size() > 0)
+						{
+							buff = m_vertexNormal[normalNum][i];
+							buff.clear();
+							cnt++;
+							i++;
+						}
+
+						else
+						{
+							cnt++;
+						}
+					}
+				}
+				normalNum++;
+				cout << m_vertexNormal[normalNum][i] << endl;
+			}
+
+			//else if (buf[0] == 'f' && buf[1] == '\0')
+			//{
+
+			//	if (/ 포함)
+			//	{
+			//		첫번째수->m_face[faceNum][0];
+			//		두번째수->m_face_texture[faceNum][0];
+			//		세번째수->m_face_normal[faceNum][0]];
+
+			//		첫번째수->m_face[faceNum][1];
+			//		두번째수->m_face_texture[faceNum][1];
+			//		세번째수->m_face_normal[faceNum][1]];
+
+			//		첫번째수->m_face[faceNum][2];
+			//		두번째수->m_face_texture[faceNum][2];
+			//		세번째수->m_face_normal[faceNum][2]];
+			//		faceNum++;
+			//	}
+			//	else
+			//	{
+			//		첫번째수->m_face[faceNum][0];
+			//		두번째수->m_face[faceNum][1];
+			//		세번째수->m_face[faceNum][2];
+			//		faceNum++;
+			//	}
+			//}
+
+
+
+		}

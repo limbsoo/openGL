@@ -1,0 +1,4 @@
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_source\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_Matrix4\Debug\otest.exe
+C:\Users\CG_LAB\Downloads\computer graphics\opengl_PreserveVertex\Debug\otest.exe
+C:\Users\CG_LAB\Desktop\Data\openGL\1.rendering_pipleline\Debug\otest.exe

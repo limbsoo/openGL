@@ -1,0 +1,209 @@
+//if (xmax - xmin != 0)
+			//{
+				//uPerX = (m_AET[j + 1].u - m_AET[j].u) / (xmax - xmin);
+				//vPerX = (m_AET[j + 1].v - m_AET[j].v) / (xmax - xmin);
+				//zPerX = (m_AET[j + 1].z - m_AET[j].z) / (xmax - xmin);
+
+				//nxPerX = (m_AET[j + 1].nx - m_AET[j].nx) / (xmax - xmin);
+				//nyPerX = (m_AET[j + 1].ny - m_AET[j].ny) / (xmax - xmin);
+				//nzPerX = (m_AET[j + 1].nz - m_AET[j].nz) / (xmax - xmin);
+
+				//nxPerX = (directionLight.x - m_AET[j].nx) / (xmax - xmin);
+				//nyPerX = (directionLight.y - m_AET[j].ny) / (xmax - xmin);
+				//nzPerX = (directionLight.z - m_AET[j].nz) / (xmax - xmin);
+
+				//lxPerNX = m_AET[j].lx * m_AET[j].nx;
+
+
+
+
+		   //	 lyPerNY = m_AET[j].ly * m_AET[j].ny;
+		   //	 lyPerNY = max(lyPerNY, 0.f);
+
+		   //	 lzPerNZ = m_AET[j].lz * m_AET[j].nz;
+		   //	 lzPerNZ = max(lzPerNZ, 0.f);
+
+		   //	 lxPerX =  directionLight* m_AET[j].x;
+		   //	 lxPerX = max(lxPerX, 0.f);
+		    //}
+
+				for (k = xmin; k < xmax; k++)
+				{
+					//checkImage[i][k][0] = (GLubyte)m_texture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][0];
+					//checkImage[i][k][1] = (GLubyte)m_texture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][1];
+					//checkImage[i][k][2] = (GLubyte)m_texture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][2];
+
+					//if (m_AET[j].z + deltaZ < m_zBuffer[i][k])
+					//{
+						//	//checkImage[i][k][0] = (GLubyte)texture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][0];
+						//	//checkImage[i][k][1] = (GLubyte)texture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][1];
+						//	//checkImage[i][k][2] = (GLubyte)texture[(int)(m_AET[j].v + deltaV)][(int)(m_AET[j].u + deltaU)][2];
+
+							//checkImage[i][k][0] = (GLubyte)((m_AET[j].nx + deltaNX) * 255);
+							//checkImage[i][k][1] = 0;
+							//checkImage[i][k][2] = 0;
+
+						//	//m_AET[j].u + deltaU;
+						//	//m_AET[j].nx + deltaU;
+
+						//	deltaNX += nxPerX;
+						//	deltaNY += nyPerX;
+						//	deltaNZ += nzPerX;
+
+						//m_zBuffer[i][k] = m_AET[j].z + deltaZ;
+						//	deltaU += uPerX;
+						//	deltaV += vPerX;
+					//deltaZ += zPerX;
+					//}
+
+					//checkImage[i][k][0] = (GLubyte)(max((m_AET[j].nx) * directionLight.x, 0.f)) * 255;
+					//checkImage[i][k][1] = (GLubyte)(max((m_AET[j].ny) * directionLight.y, 0.f)) * 255;
+					//checkImage[i][k][2] = (GLubyte)(max((m_AET[j].nz) * directionLight.z, 0.f)) * 255;
+
+
+					//checkImage[i][k][0] = (GLubyte)(max((m_AET[j].nx + deltaNX + 1) * directionLight.x / 2.f * 255, 0.f)) ;
+					//checkImage[i][k][1] = (GLubyte)(max((m_AET[j].ny + deltaNY + 1) * directionLight.y / 2.f * 255, 0.f)) ;
+					//checkImage[i][k][2] = (GLubyte)(max((m_AET[j].nz + deltaNZ + 1) * directionLight.z / 2.f * 255, 0.f)) ;
+
+
+					checkImage[i][k][0] = (GLubyte)(max((m_AET[j].nx) * directionLight.x, 0.f));
+					checkImage[i][k][1] = (GLubyte)(max((m_AET[j].ny) * directionLight.y, 0.f));
+					checkImage[i][k][2] = (GLubyte)(max((m_AET[j].nz) * directionLight.z, 0.f));
+
+
+					//checkImage[i][k][0] = (GLubyte)((m_AET[j].nx + deltaNX + 1) / 2.0 * 255);
+					//checkImage[i][k][1] = (GLubyte)((m_AET[j].nx + deltaNX + 1) / 2.0 * 255);
+					//checkImage[i][k][2] = (GLubyte)((m_AET[j].nx + deltaNX + 1) / 2.0 * 255);
+				//}
+
+				//checkImage[i][k][0] = (GLubyte)((m_AET[j].lx + deltaLX) * 255);
+				//checkImage[i][k][1] = (GLubyte)((m_AET[j].lx + deltaLX) * 255);
+				//checkImage[i][k][2] = (GLubyte)((m_AET[j].lx + deltaLX) * 255);
+
+
+				//checkImage[i][k][0] = (GLubyte)(lxPerNX * 0.8f);
+				//checkImage[i][k][1] = (GLubyte)(lxPerNX * 0.8f);
+				//checkImage[i][k][2] = (GLubyte)(lxPerNX * 0.8f);
+
+				//lxPerNX = m_AET[j].lx * (m_AET[j].nx + nxPerX);
+
+				//lxPerNX = max(lxPerNX, 0.f);
+
+
+
+				//else
+				//{
+				//	checkImage[i][k][0] = (GLubyte)0;
+				//	checkImage[i][k][1] = (GLubyte)0;
+				//	checkImage[i][k][2] = (GLubyte)0;
+				//}
+
+				// diffuse sd(광원) *md(재질)
+				// (sd.x *md.x, sd.y *md.y, sd.z *md.z
+
+
+					//deltaNX += nxPerX;
+					//deltaNY += nyPerX;
+					//deltaNZ += nzPerX;
+
+
+					//deltaU += uPerX;
+					//deltaV += vPerX;
+					//deltaZ += zPerX;
+
+					//lxPerNX += nxPerX;
+
+					//lyPerNY += nzPerX;
+					//lzPerNZ += deltaNZ;
+
+
+
+
+
+
+
+
+
+
+
+		//if (makeNormals == true)
+		//{
+		//	Matrix4 inverseTransposeMatrix;
+
+		//	inverseTransposeMatrix = inverseMatrix(m_world);
+		//	inverseTransposeMatrix = transposeMatrix(inverseTransposeMatrix);
+
+		//	for (int i = 0; i < m_nNumVertex; i++) // 각 face의 normal
+		//	{
+		//		m_vertexNormal[i][0] = m_vertexNormal[i][0] * inverseTransposeMatrix.arr[0][0] + m_vertexNormal[i][1] * inverseTransposeMatrix.arr[0][1] + m_vertexNormal[i][2] * inverseTransposeMatrix.arr[0][2];
+		//		m_vertexNormal[i][1] = m_vertexNormal[i][0] * inverseTransposeMatrix.arr[1][0] + m_vertexNormal[i][1] * inverseTransposeMatrix.arr[1][1] + m_vertexNormal[i][2] * inverseTransposeMatrix.arr[1][2];
+		//		m_vertexNormal[i][2] = m_vertexNormal[i][0] * inverseTransposeMatrix.arr[2][0] + m_vertexNormal[i][1] * inverseTransposeMatrix.arr[2][1] + m_vertexNormal[i][2] * inverseTransposeMatrix.arr[2][2];
+		//	}
+		//	makeNormals = false;
+		//}
+
+
+
+
+
+
+
+
+
+
+void Renderer::brightnessOfPixels()
+{
+	float ret;
+
+	//월드 공간에 있는 노멀을 프로젝션 카메라 작업을 마친후에 보냄 픽셀로
+	//역전치행렬
+
+	//for (int i = 0; i < m_nNumVertex; i++)
+	//{
+	//	Vector4 v(3.0f, 3.0f, 3.0f, 1);
+	//	Vector4 w(m_vertex[i], 1);
+
+	//	m_lightVertex[i][0] = v.x - w.x;
+	//	m_lightVertex[i][1] = v.y - w.y;
+	//	m_lightVertex[i][2] = v.z - w.z;
+	//}
+
+	//for (int i = 0; i < m_nNumVertex; i++)
+	//{
+	//	Vector4 v(m_lightVertex[i], 1);
+	//	Vector4 w(m_normalVertex[i], 1);
+
+	//	ret = v * w;
+	//	ret = max(ret, 0.f);
+	//	m_lightStrength[i] = ret;
+
+
+		//if (ret == 0) // 빛 없음
+		//{
+		//	lightStrength[i] = 0.f;
+		//}
+		//else if (ret == 1)  // 빛 최대
+		//{
+		//	lightStrength[i] = 1.f;
+		//}
+		//else if (ret > 0 || ret < 1)
+		//{
+
+		//}
+	//}
+
+	//월드 변환이 이미 일어난 상태
+	//객체 공간에서의 normal -> 월드공간에서의 normal , World position(m_world * m_vertex[i]) => 이 둘을 pixel로 전달하는 작업
+	//이후 light Vector 계산 -> diffuse term 계산
+
+	//normal의 월드 변환을 위해서 L^-T(L의 역전치행렬)을 사용
+	// 그리고 정규화
+
+	//diffuse 는 light vector * 점 p의 normal(내적(스칼라))
+	//max(l vector , 0)
+	//이것이 빛의 강도
+
+	//diffuse = s d(광원의 rgb) * m d (물체의 디퓨즈 계수) (같은 원소간 곱셈)
+	//max(l vector , 0) * diffuse
+
+
